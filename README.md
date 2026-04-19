@@ -29,8 +29,10 @@ A robust and scalable RESTful API built with Node.js, designed to manage users a
 Follow these steps to get your development environment running:
 
 ### 1. Clone the Repository
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+
+    docker-compose up -d --build
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    cd your-repo-name
 
 ### 2. Configure Environment Variables
 Copy the example environment file and adjust the values if necessary:
@@ -43,22 +45,50 @@ Note: Make sure to define a secure JWT_SECRET and correct database credentials i
 ### 3. Build and Run with Docker
 The easiest way to start the project is using Docker Compose:
 
-    Spin up the PostgreSQL database.
     docker-compose up -d --build
 
 This command will:
 
-    Spin up the PostgreSQL database.
+Spin up the PostgreSQL database.
 
     Build the Node.js API container.
 
     Automatically run Migrations and Seeds (Admin user creation).
 
+### 4. Verify Database (Optional)
+To check if the Admin user was created successfully:
+
+    docker exec -it api-container npx sequelize-cli db:seed:all
+
+##📡 API Endpoints (Quick Look)
+
+Method,Endpoint,Description,Access
+POST,/login,Authenticate user & get token,Public
+GET,/users/all,List all users (with pagination),Admin Only
+POST,/users,Create new user & address,Public
+PUT,/users/:id,Update user profile,Owner / Admin
+DELETE,/users/:id,Soft delete user,Owner / Admin
+
+##🧪 Testing the API
+
+Use Postman or Insomnia.
+
+Set the Authorization header as Bearer <your_token>.
+
+Try fetching users with pagination: GET /users/all?page=1&limit=10&include=addresses.
 
 
+🤝 Contributing
 
+Fork the project.
 
+Create your Feature Branch (git checkout -b feature/AmazingFeature).
 
+Commit your changes (git commit -m 'Add some AmazingFeature').
+
+Push to the Branch (git push origin feature/AmazingFeature).
+
+Open a Pull Request.
 
 
 
