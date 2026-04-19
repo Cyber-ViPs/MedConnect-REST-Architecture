@@ -34,7 +34,7 @@ services:
       - ./API_node/.env
     command: sh -c "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && npm start" #remove "npx sequelize-cli db:seed:all &&" when in production to not allow auto seed admin
     environment:
-      DATABASE_URL: "postgresql://root:sua_senha@db:5432/banco_post?schema=public"
+      DATABASE_URL: "postgresql://root:your_password@db:5432/banco_post?schema=public"
 
     networks:
       - app_net
