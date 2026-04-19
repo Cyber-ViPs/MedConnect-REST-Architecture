@@ -31,8 +31,8 @@ Follow these steps to get your development environment running:
 ### 1. Clone the Repository
 
     
-git clone https://github.com/Cyber-ViPs/MedConnect-REST-Architecture/tree/main
-    cd your-repo-name
+    git clone https://github.com/Cyber-ViPs/MedConnect-REST-Architecture/tree/main
+    cd MedConnect-REST-Architecture
 
 ### 2. Configure Environment Variables
 Copy the example environment file and adjust the values if necessary:
