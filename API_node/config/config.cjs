@@ -5,7 +5,7 @@ dotenv.config();
 module.exports = {
   development: {
     username: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || 'sua_senha',
+    password: process.env.DB_PASSWORD || 'your_password',
     database: process.env.DB_NAME || 'banco_post',
     host: process.env.DB_HOST || 'db',
     dialect: 'postgres',
