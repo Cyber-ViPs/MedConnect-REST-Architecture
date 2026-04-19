@@ -31,7 +31,7 @@ Follow these steps to get your development environment running:
 ### 1. Clone the Repository
 
     
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+git clone [[https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)](https://github.com/Cyber-ViPs/MedConnect-REST-Architecture/tree/main)
     cd your-repo-name
 
 ### 2. Configure Environment Variables
